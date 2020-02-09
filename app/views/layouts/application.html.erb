@@ -7,9 +7,38 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+   <style>  
+            .gfg { 
+                width:auto; 
+                text-align:center; 
+                padding:20px; 
+            } 
+            img { 
+                max-width:50%; 
+                        height:auto; 
+            } 
+        </style>  
+
   </head>
 
+
   <body>
+    <header class="row">
+      <div class="logo col-3">
+        <%= image_tag 'logo.jpg' %>
+      </div>
+      <div class="col-4 slogan">
+        The Greatest Motorcyle Podcast In Northern Colorado, Or Your Money Back!
+      </div>
+      <div class="col-5 links">
+        <%= link_to "Review for Yourself" %>
+        <%= link_to "About" %>
+      </div>
+    </header>
+
+    <hr />
+
+    <br class="clear" />
     <%= yield %>
   </body>
 </html>
